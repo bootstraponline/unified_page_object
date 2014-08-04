@@ -4,6 +4,7 @@ module UnifiedPageObject
     page_module.constants.each do |page_class|
       # set page name before the class is fully qualified.
       # ButtonsPage => buttons_page
+      # https://github.com/rails/rails/blob/daaa21bc7d20f2e4ff451637423a25ff2d5e75c7/activesupport/lib/active_support/inflector/methods.rb#L96
       page_name  = page_class.to_s.gsub(/([a-z])([A-Z])/, '\1_\2').downcase
 
       # Pages::ButtonsPage
