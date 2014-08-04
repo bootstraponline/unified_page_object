@@ -17,5 +17,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'page-object', '~> 1.0.2'
   s.add_runtime_dependency 'rspec', '~> 3.0.0'
 
+  s.add_development_dependency 'appium_thor', '~> 0.0', '>= 0.0.6'
+
   s.files = `git ls-files`.split "\n"
 end
