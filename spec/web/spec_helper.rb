@@ -7,21 +7,13 @@ require 'rspec'
 require_relative '../../lib/unified_page_object'
 
 # configure
-UnifiedPageObject.configure :web
+UnifiedPageObject.configure platform: :web, driver: Selenium::WebDriver.for(:firefox)
 
 # page objects
 require_relative 'pages/example_page'
 
-# $driver.driver
-$driver = Class.new do
-  include Singleton
-
-  def driver
-    @driver ||= Selenium::WebDriver.for :firefox
-  end
-end.instance
-
-UnifiedPageObject.define_page_methods ::Pages
+# create methods on RSpec for the page classes
+UnifiedPageObject.define_page_methods page_module: Pages, test_class: RSpec::Core::ExampleGroup
 
 # close browser after tests complete
 RSpec.configure do |config|

@@ -6,7 +6,10 @@ module UnifiedPageObject
     # @param page_module [Module] the parent module for the pages
     # @param test_class [Class] the class to define the methods on
     # @return [void]
-    def define_page_methods page_module, test_class=RSpec::Core::ExampleGroup
+    def define_page_methods opts={}
+      page_module = opts[:page_module]
+      raise 'must pass page_module' unless page_module
+      test_class  = opts.fetch :test_class, RSpec::Core::ExampleGroup
       page_module.constants.each do |page_class|
         # set page name before the class is fully qualified.
         # ButtonsPage => buttons_page
