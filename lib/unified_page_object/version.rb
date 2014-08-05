@@ -1,4 +1,4 @@
 module UnifiedPageObject
-  VERSION = '0.0.6' unless defined? ::UnifiedPageObject::VERSION
-  DATE    = '2014-07-31' unless defined? ::UnifiedPageObject::DATE
+  VERSION = '0.0.1' unless defined? ::UnifiedPageObject::VERSION
+  DATE    = '2014-08-04' unless defined? ::UnifiedPageObject::DATE
 end
