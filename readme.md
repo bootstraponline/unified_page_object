@@ -1,3 +1,5 @@
+# unified_page_object [![Gem Version](https://badge.fury.io/rb/unified_page_object.svg)](http://badge.fury.io/rb/unified_page_object)
+
 rspec + page object for web/ios/android
 
 --
