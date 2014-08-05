@@ -1,9 +1,7 @@
 module Pages
   class ExamplePage
-    # include PageObject # todo: fix
+    include PageObject
 
-    def example_action
-      puts 'example action'
-    end
+    page_url 'http://www.google.com/'
   end
 end
